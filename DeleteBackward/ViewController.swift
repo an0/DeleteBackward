@@ -20,9 +20,7 @@ class ViewController: UIViewController {
 extension ViewController: UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text.isEmpty {
-            assert(range == NSRange(location: 0, length: 2), "Keyboard's implementation of backward deletion is wrong.")
-        }
+        print(range)
         return true
     }
     

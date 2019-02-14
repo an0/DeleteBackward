@@ -67,14 +67,10 @@ class KeyboardViewController: UIInputViewController {
     }
     
     @objc private func deleteBackward() {
-        guard let textBefore = textDocumentProxy.documentContextBeforeInput, let charToDelete = textBefore.last else {
+        guard let textBefore = textDocumentProxy.documentContextBeforeInput, !textBefore.isEmpty else {
             return
         }
-        
-        let timesToDelete = charToDelete.unicodeScalars.reduce(0) { $0 + $1.utf16.count }
-        for _ in 0..<timesToDelete {
-            textDocumentProxy.deleteBackward()
-        }
+        textDocumentProxy.deleteBackward()
     }
     
 }

@@ -71,8 +71,8 @@ class KeyboardViewController: UIInputViewController {
             return
         }
         
-        let timeToDelete = charToDelete.unicodeScalars.reduce(0) { $0 + $1.utf16.count }
-        for _ in 0..<timeToDelete {
+        let timesToDelete = charToDelete.unicodeScalars.reduce(0) { $0 + $1.utf16.count }
+        for _ in 0..<timesToDelete {
             textDocumentProxy.deleteBackward()
         }
     }

@@ -12,7 +12,33 @@
 		C98B73AA2215194C0099480F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98B73A82215194C0099480F /* Main.storyboard */; };
 		C98B73AC2215194D0099480F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98B73AB2215194D0099480F /* Assets.xcassets */; };
 		C98B73AF2215194D0099480F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98B73AD2215194D0099480F /* LaunchScreen.storyboard */; };
+		C98B73BD221519F60099480F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98B73BC221519F60099480F /* KeyboardViewController.swift */; };
+		C98B73C1221519F60099480F /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C98B73BA221519F60099480F /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C98B73BF221519F60099480F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C98B73992215194C0099480F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98B73B9221519F60099480F;
+			remoteInfo = Keyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C98B73C5221519F60099480F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C98B73C1221519F60099480F /* Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C98B73A12215194C0099480F /* DeleteBackward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeleteBackward.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +48,20 @@
 		C98B73AB2215194D0099480F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C98B73AE2215194D0099480F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98B73B02215194D0099480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98B73BA221519F60099480F /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98B73BC221519F60099480F /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		C98B73BE221519F60099480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C98B739E2215194C0099480F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B73B7221519F60099480F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				C98B73A32215194C0099480F /* DeleteBackward */,
+				C98B73BB221519F60099480F /* Keyboard */,
 				C98B73A22215194C0099480F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				C98B73A12215194C0099480F /* DeleteBackward.app */,
+				C98B73BA221519F60099480F /* Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +102,15 @@
 			path = DeleteBackward;
 			sourceTree = "<group>";
 		};
+		C98B73BB221519F60099480F /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C98B73BC221519F60099480F /* KeyboardViewController.swift */,
+				C98B73BE221519F60099480F /* Info.plist */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +121,34 @@
 				C98B739D2215194C0099480F /* Sources */,
 				C98B739E2215194C0099480F /* Frameworks */,
 				C98B739F2215194C0099480F /* Resources */,
+				C98B73C5221519F60099480F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C98B73C0221519F60099480F /* PBXTargetDependency */,
 			);
 			name = DeleteBackward;
 			productName = DeleteBackward;
 			productReference = C98B73A12215194C0099480F /* DeleteBackward.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C98B73B9221519F60099480F /* Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98B73C2221519F60099480F /* Build configuration list for PBXNativeTarget "Keyboard" */;
+			buildPhases = (
+				C98B73B6221519F60099480F /* Sources */,
+				C98B73B7221519F60099480F /* Frameworks */,
+				C98B73B8221519F60099480F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keyboard;
+			productName = Keyboard;
+			productReference = C98B73BA221519F60099480F /* Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +161,9 @@
 				ORGANIZATIONNAME = Moke;
 				TargetAttributes = {
 					C98B73A02215194C0099480F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					C98B73B9221519F60099480F = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -113,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				C98B73A02215194C0099480F /* DeleteBackward */,
+				C98B73B9221519F60099480F /* Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +198,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C98B73B8221519F60099480F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +217,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C98B73B6221519F60099480F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98B73BD221519F60099480F /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C98B73C0221519F60099480F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C98B73B9221519F60099480F /* Keyboard */;
+			targetProxy = C98B73BF221519F60099480F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C98B73A82215194C0099480F /* Main.storyboard */ = {
@@ -281,6 +374,7 @@
 		C98B73B42215194D0099480F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 579VCLF427;
@@ -299,6 +393,7 @@
 		C98B73B52215194D0099480F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 579VCLF427;
@@ -309,6 +404,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moke.DeleteBackward;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C98B73C3221519F60099480F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 579VCLF427;
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moke.DeleteBackward.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C98B73C4221519F60099480F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 579VCLF427;
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moke.DeleteBackward.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,6 +464,15 @@
 			buildConfigurations = (
 				C98B73B42215194D0099480F /* Debug */,
 				C98B73B52215194D0099480F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C98B73C2221519F60099480F /* Build configuration list for PBXNativeTarget "Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98B73C3221519F60099480F /* Debug */,
+				C98B73C4221519F60099480F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
